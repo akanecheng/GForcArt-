@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>contatos</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+<style>
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, rgba(13, 53, 68, 1), rgba(98, 161, 189, 1));
+  display:flex;
+  color:white;
+  flex-direction: column;
+  align-items: Center;
+  justify-content: center;
+  min-height: 100vh;
+  padding:30px;
+}
+
+h2{
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+form{
+  background: rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(19, 53, 69, 0.78);
+  width: 100%;
+  max-width: 450px;
+  display:flex;
+  flex-direction: column;
+  gap:15px;
+  backdrop-filter: blur(12px);
+  border:1px solid rgba(255,255,255,0.25);
+  
+}
+ input, textarea{
+   width: 90%;
+   padding:12px;
+   border: none;
+   border-radius: 8px;
+   outline:none;
+   font-size: 1em;
+   resize:none;
+   background: rgba(255, 255, 255, 0.15);
+   color: white;
+ }
+ 
+ input::placeholder, textarea::placeholder{
+   color: rgba(0,0,0,0.7);
+ }
+  
+  button{
+    background: #0e4a62;
+    color: white;
+    border:none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor:pointer;
+    transition:transform 0.2 ease, background 0.3s ease;
+  }
+  
+  button:hover{
+    background: #13607e;
+    transform:scale(1.05);
+  }
+  
+  button:active{
+    transform:scale(0.95);
+  }
+  
+  .mensagem-final{
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+    color:rgba(255,255,255,0.9);
+  }
+  
+  .redes{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+  }
+  
+.redes a{
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .redes a:hover{
+    color:#0e4a62;
+    transform:scale(1.2);
+  }
+  
+  @import 
+  url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+  
+</style>
+
+</head>
+
+<body>
+  
+  <form id="formContato">
+    
+    <label>Nome:</label><input type="text" nome="name" placeholder ="seu nome" required>
+<br> <br>
+ <label>Email:</label><input type="text" nome="email" placeholder ="digite seu email" required>
+    <br> <br>
+    <label>Assunto:</label><input type="text" nome="assunto" placeholder ="assunto" required>
+    <br> <br>
+    
+    <textarea name="mensagem" id= rows="4" placeholder="sua mensagem" required></textarea>
+    <br> <br>
+    <button type="submit">Enviar mensagem</button>
+
+  </form>
+  
+<script src="contato.js" type="text/javascript" charset="utf-8"></script>
+
+
+<div class="redes">
+  <a href="https://www.instagram.com/polyana.02/">
+    <i class="fa-brands fa-instagram"></i>
+    
+  </a>
+    <a href="">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+  
+    <a href="https://x.com/kit_usagi">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+    <a href="https://t.me/itsmeakane">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+  
+    <a href="">
+    <i class="fa-brands fa-discord"></i>
+  </a>
+  
+    <a href="https://youtube.com/@kitsuka3482?si=5kmPpm1iYOa7fLAT">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+  
+</div>
+
+</body>
+
+</html>

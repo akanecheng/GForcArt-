@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desenhos</title>
+
+  <style>
+    body {
+      background-color: rgb(15, 76, 100);
+      padding: 15px;
+      margin: 0;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(10, 54, 86, 0.9);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* GALERIA */
+    .galeria {
+      display: grid;
+      gap: 10px;
+      padding: 100px 10px 10px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .arte {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .arte img {
+      width: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .arte .info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events:none;
+    }
+
+    .arte:hover img {
+      transform: scale(1.05);
+      filter: brightness(80%);
+    }
+
+    .arte:hover .info {
+      opacity: 1;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #modal-texto {
+      margin-top: 10px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .seta {
+      position: absolute;
+      top: 50%;
+      color: white;
+      font-size: 2.5em;
+      padding: 10px;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.3s;
+    }
+
+    .seta:hover {
+      transform: scale(1.2);
+      color: #0e4a62;
+    }
+
+    .seta.esquerda {
+      left: 20px;
+    }
+
+    .seta.direita {
+      right: 20px;
+    }
+    
+   button {
+    margin: 20px;
+    height:40px;
+    width:100%;
+    padding: 10px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: rgba(255,255,255,0.3);
+  }
+      
+    }
+  </style>
+  
+</head>
+<body>
+
+  <header>
+    <div class="logo"><img src="" alt=""></div>
+    <nav>
+      <ul>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="galeria">
+    <div class="arte">
+      <img src="maochan.jpg" alt="maomao">
+      <div class="info"><h3>Nome da arte</h3></div>
+    </div>
+
+    <div class="arte">
+      <img src="maojinshi.jpg" alt="maojinshi">
+      <div class="info"><h3>Nome da arte</h3></div>
+    </div>
+
+    <div class="arte">
+      <img src="maozinha.jpg" alt="maozinha">
+      <div class="info"><h3>Nome da arte</h3></div>
+    </div>
+
+    <div class="arte">
+      <img src="mj.jpg" alt="mj">
+      <div class="info"><h3>Nome da arte</h3></div>
+    </div>
+
+    <div class="arte">
+      <img src="belaarte.jpg" alt="belaarte">
+      <div class="info"><h3>Uma bela arte</h3></div>
+    </div>
+
+    <div class="arte">
+      <img src="mm.jpg" alt="maonova">
+      <div class="info"><h3>Nova arte</h3></div>
+    </div>
+  </div>
+
+  <!-- MODAL CORRETO -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <span class="seta esquerda">&#10094;</span>
+    <img class="modal-conteudo" id="modal-img">
+    <span class="seta direita">&#10095;</span>
+    <div id="modal-texto"></div>
+  </div>
+
+  <script src="seta.js" defer></script>
+  
+  <a href="index.html">
+      <button type="submit">voltar a página inicial</button>
+  </a>
+
+  
+</body>
+</html>
