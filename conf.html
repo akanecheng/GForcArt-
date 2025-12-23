@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configurações</title>
+  <link rel="stylesheet" href="confg.css">
+</head>
+
+<body>
+  
+  <header>
+    <button class="btnMenu" onclick="toggleMenu()">☰</button>
+    
+  </header>
+  
+  <nav id="menuLateral" class="menuLateral">
+    <span class="fecharMenu" onclick="toggleMenu()">x</span>
+    <ul>
+      <li><a href="index.html">Página inicial</a></li>
+      <li><a href="galeriafts.html">Galeria</a></li>
+      <li><a href="personagens.html">Personagens</a></li>   
+      <li><a href="contato.html">Contato</a></li>   
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="conf.html">Configurações</a></li>
+    </ul>
+  </nav>
+              
+  <main>
+    <div class="config-card">
+
+      <h2>Preferências</h2>
+
+      <div class="config-item">
+        <span>Tema</span>
+        <label class="switch">
+          <input type="checkbox" id="tema" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="config-item">
+        <span>Notificações</span>
+        <label class="switch">
+          <input type="checkbox" id="notif" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="config-item">
+        <span>Modo compacto</span>
+        <label class="switch">
+          <input type="checkbox" id="compacto" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <h2>Conta</h2>
+
+      <button class="btn">Alterar senha</button>
+      <button class="btn danger">Excluir conta</button>
+
+    </div>
+  </main>
+  
+<script src="conf.js"></script>
+</body>
+</html>

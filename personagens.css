@@ -1,0 +1,211 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #005F91, #000000);
+    background-repeat: no-repeat;
+    background-position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 70px; 
+}
+
+
+/* Header desktop e mobile */
+header {
+  background-color: rgba(10, 54, 86, 0.9);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 28px;
+}
+
+.btnMenu {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Menu lateral */
+.menuLateral {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(10, 54, 86, 0.95);
+  color: #fff;
+  padding-top: 70px;
+  overflow-y: auto;
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.menuLateral.aberto {
+  left: 0;
+}
+
+.menuLateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menuLateral li {
+  margin: 20px;
+  text-align: center;
+}
+
+.menuLateral a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menuLateral a:hover {
+  color: #f5a623;
+}
+
+.fecharMenu {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.fecharMenu:hover {
+  color: #d60620;
+}
+
+/* Banner */
+.banner {
+  width: 90%;
+  max-width: 1000px;
+  height: 250px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.3);
+  background-image: url("banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Carrossel */
+.carrossel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 90vw;
+  margin: 0 auto 50px auto;
+}
+
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.card {
+  flex: none;
+  width: 220px;
+  height: 500px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  scroll-snap-align: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.card.ative {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255,255,255,0.5);
+}
+
+/* Responsivo */
+@media (max-width: 768px){
+  .carrossel {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .card {
+    width: 180px;
+    height: 250px;
+  }
+
+  .banner {
+    height: 180px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px){
+  .carrossel {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .card {
+    width: 150px;
+    height: 200px;
+  }
+
+  .banner {
+    height: 150px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+}

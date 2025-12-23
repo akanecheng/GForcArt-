@@ -53,3 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 console.log("JS carregou!");
+
+document.querySelector('.add-btn').addEventListener('click', () => {
+    
+    document.getElementById("fileinput").click();
+  });
+  
+  document.getElementById('fileinput').addEventListener('change', (event)=> {
+    const file= event.target.files[0];
+    if(file){
+      console.log("imagem selecionada:", file.name);
+    }
+  });

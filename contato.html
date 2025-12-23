@@ -13,7 +13,11 @@
 body{
   margin: 0;
   font-family: sans-serif;
-  background: linear-gradient(to bottom, rgba(13, 53, 68, 1), rgba(98, 161, 189, 1));
+  background:linear-gradient(to bottom, #005F91, #000000);;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display:flex;
   color:white;
   flex-direction: column;
@@ -117,8 +121,6 @@ form{
     <label>Nome:</label><input type="text" nome="name" placeholder ="seu nome" required>
 <br> <br>
  <label>Email:</label><input type="text" nome="email" placeholder ="digite seu email" required>
-    <br> <br>
-    <label>Assunto:</label><input type="text" nome="assunto" placeholder ="assunto" required>
     <br> <br>
     
     <textarea name="mensagem" id= rows="4" placeholder="sua mensagem" required></textarea>
